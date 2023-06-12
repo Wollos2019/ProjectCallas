@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CallaciMaui.Pages.NewPage1"
+             Title="NewPage1">
+
+    <VerticalStackLayout Padding="40" Spacing="30">
+
+        <Label Text="Enregistrer une question" HorizontalOptions="Center" FontSize="Title" />
+
+        <HorizontalStackLayout>
+            <Entry x:Name="questionText" Placeholder="The question to ask" Keyboard="Text" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Entry x:Name="mark" Placeholder="The number of Mark" Keyboard="Numeric" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Entry x:Name="image" Placeholder="The Uri of the image" Keyboard="Text" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Entry x:Name="solution" Placeholder="The question's solution" Keyboard="Text" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <Picker Title="Set an answer">
+                <Picker.Items>
+                    <x:String>Response 1</x:String>
+                    <x:String>Response 2</x:String>
+                    <x:String>Response 3</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="response" Placeholder="Answers Propostion" Keyboard="Text" Margin="10,0,0,0" />
+            <Button x:Name="SetAnsBtn" Text="Set Answer" Clicked="OnSetBtnClicked" Margin="10,0,0,0"/>
+        </HorizontalStackLayout>
+
+        
+            <Button Text="Add a question" Clicked="OnCreateBtnClicked" HorizontalOptions="Center"/>
+        
+
+        <Label x:Name="statusMessage"/>
+
+    </VerticalStackLayout>
+</ContentPage>

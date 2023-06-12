@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CallaciMaui.Pages.NewPage5"
+             Title="Quiz">
+    <VerticalStackLayout>
+        <Label 
+            x:Name="Counter"
+            Text="10"
+            FontSize="50"
+            VerticalOptions="Start"
+            HorizontalOptions="End"
+            Padding="15"/>
+
+        <Image
+                x:Name="imageBox"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" 
+                IsVisible="True"/>
+
+        <Label
+                Text="4x6"
+            x:Name="qtnLabel"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="80"
+                HorizontalOptions="Center"
+                IsVisible="True" />
+
+        <Label x:Name="statusMessage"/>
+
+        <Grid ColumnDefinitions="180, 180, 180" HorizontalOptions="Center" VerticalOptions="End"
+              Padding="40">
+            <Button Grid.Column="0"
+                    x:Name="AnswerBtn"
+                    Text="Click me"
+                    WidthRequest="100"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="ShowReaction"
+                    Padding="10"/>
+
+            <Button Grid.Column="1"
+                    x:Name="AnswerBtn2"
+                    Text="Click me"
+                    WidthRequest="100"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="ShowReaction"
+                    Padding="10"/>
+
+
+            <Button Grid.Column="2"
+                    x:Name="AnswerBtn3"
+                    Text="Page 2"
+                    WidthRequest="100"
+                    SemanticProperties.Hint="Move to another exercise page"
+                    Clicked="ShowReaction"
+                    Padding="10"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
