@@ -12,45 +12,51 @@ build_property.EnableSingleFileAnalyzer = true
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = CallaciMaui
-build_property.ProjectDir = C:\Users\Ndoko\Documents\MesProjects\CallaciMaui\CallaciMaui\
+build_property.ProjectDir = C:\Users\Pierre Ndoko Ndoko\Documents\Projects\CallaciMaui\
 
-[C:/Users/Ndoko/Documents/MesProjects/CallaciMaui/CallaciMaui/App.xaml]
+[C:/Users/Pierre Ndoko Ndoko/Documents/Projects/CallaciMaui/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CallaciMaui.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Ndoko/Documents/MesProjects/CallaciMaui/CallaciMaui/AppShell.xaml]
+[C:/Users/Pierre Ndoko Ndoko/Documents/Projects/CallaciMaui/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CallaciMaui.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Ndoko/Documents/MesProjects/CallaciMaui/CallaciMaui/MainPage.xaml]
+[C:/Users/Pierre Ndoko Ndoko/Documents/Projects/CallaciMaui/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CallaciMaui.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/Ndoko/Documents/MesProjects/CallaciMaui/CallaciMaui/Pages/NewPage1.xaml]
+[C:/Users/Pierre Ndoko Ndoko/Documents/Projects/CallaciMaui/Pages/DataPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CallaciMaui.Pages.DataPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\DataPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\DataPage.xaml
+
+[C:/Users/Pierre Ndoko Ndoko/Documents/Projects/CallaciMaui/Pages/NewPage1.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CallaciMaui.Pages.NewPage1.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\NewPage1.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\NewPage1.xaml
 
-[C:/Users/Ndoko/Documents/MesProjects/CallaciMaui/CallaciMaui/Pages/NewPage5.xaml]
+[C:/Users/Pierre Ndoko Ndoko/Documents/Projects/CallaciMaui/Pages/NewPage5.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CallaciMaui.Pages.NewPage5.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\NewPage5.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\NewPage5.xaml
 
-[C:/Users/Ndoko/Documents/MesProjects/CallaciMaui/CallaciMaui/Resources/Styles/Colors.xaml]
+[C:/Users/Pierre Ndoko Ndoko/Documents/Projects/CallaciMaui/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CallaciMaui.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Ndoko/Documents/MesProjects/CallaciMaui/CallaciMaui/Resources/Styles/Styles.xaml]
+[C:/Users/Pierre Ndoko Ndoko/Documents/Projects/CallaciMaui/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CallaciMaui.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

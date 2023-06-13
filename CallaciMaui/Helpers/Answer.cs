@@ -10,6 +10,7 @@ namespace CallaciMaui.Helpers
     public class Answer
     {
         public int Id {  get; set; }
+        public int SelectNb { get; set; }
         public string Text { get; set; }
     }
 

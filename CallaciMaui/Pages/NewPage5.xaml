@@ -14,14 +14,14 @@
 
         <Image
                 x:Name="imageBox"
-                Source="dotnet_bot.png"
+                
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" 
                 IsVisible="True"/>
 
         <Label
-                Text="4x6"
+                
             x:Name="qtnLabel"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="80"

@@ -30,7 +30,7 @@ public partial class NewPage5 : ContentPage
             AnswerBtn2.Text = answers.ElementAt(1).Text;
             AnswerBtn3.Text = answers.ElementAt(2).Text;
             qtnLabel.Text = question.QuestionText;
-            await Task.Delay(2000);
+            await Task.Delay(200000);
         }
     }
 }

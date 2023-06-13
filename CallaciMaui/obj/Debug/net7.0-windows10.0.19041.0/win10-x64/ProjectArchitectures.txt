@@ -1,1 +1,1 @@
-C:\Users\Ndoko\Documents\MesProjects\CallaciMaui\CallaciMaui\CallaciMaui.csproj;x64
+C:\Users\Pierre Ndoko Ndoko\Documents\Projects\CallaciMaui\CallaciMaui.csproj;x64
