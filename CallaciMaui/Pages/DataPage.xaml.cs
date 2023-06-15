@@ -10,10 +10,10 @@ public partial class DataPage : ContentPage
 	public DataPage()
 	{
 		InitializeComponent();
-        OnGetBtnClicked();
+        
 	}
 
-    public async void OnGetBtnClicked()
+    private async void OnGetBtnClicked(Object sender, EventArgs e)
     {
         statusMessage.Text = "";
         List<Question> Questions = await App.QuestionRepo.GetAllQuestion();
@@ -27,6 +27,7 @@ public partial class DataPage : ContentPage
             label5.Text = question.QuestionText;
             await Task.Delay(200000);
         }
+        collectionView.ItemsSource = Questions;
     }
 
 
