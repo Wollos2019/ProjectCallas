@@ -1,6 +1,6 @@
 using CallaciMaui.Helpers;
 using CallaciMaui.Models;
-
+using CallaciMaui.ViewModels;
 using System.Text.Json;
 
 namespace CallaciMaui.Pages;
@@ -10,6 +10,7 @@ public partial class DataPage : ContentPage
 	public DataPage()
 	{
 		InitializeComponent();
+        BindingContext = new QuestionViewModel();
         
 	}
 
