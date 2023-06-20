@@ -53,103 +53,89 @@ namespace CallaciMaui.ViewModels
         public ICommand FilterCommand => new Command<string>(FilterItems);
         public ICommand QuestionSelectionChangedCommand => new Command(QuestionSelectionChanged);
 
-        public QuestionsViewModel()
+        public QuestionViewModel()
         {
             source = new List<Question>();
             CreateQuestionCollection();
 
             selectedQuestion = Questions.Skip(3).FirstOrDefault();
-            MonkeySelectionChanged();
+            //QuestionSelectionChanged();
 
-            SelectedQuestions = new ObservableCollection<object>()
-            {
-                Questions[1], Questions[3], Questions[4]
-            };
+            //SelectedQuestions = new ObservableCollection<object>()
+            //{
+            //    Questions[1], Questions[3], Questions[4]
+            //};
         }
 
         void CreateQuestionCollection()
         {
             source.Add(new Question
             {
-                Name = "Baboon",
-                Location = "Africa & Asia",
-                Details = "Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae.",
-                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
-            });
-
-            source.Add(new Monkey
-            {
-                Name = "Capuchin Monkey",
-                Location = "Central & South America",
-                Details = "The capuchin monkeys are New World monkeys of the subfamily Cebinae. Prior to 2011, the subfamily contained only a single genus, Cebus.",
-                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Capuchin_Costa_Rica.jpg/200px-Capuchin_Costa_Rica.jpg"
-            });
-
-            source.Add(new Monkey
-            {
-                Name = "Blue Monkey",
-                Location = "Central and East Africa",
-                Details = "The blue monkey or diademed monkey is a species of Old World monkey native to Central and East Africa, ranging from the upper Congo River basin east to the East African Rift and south to northern Angola and Zambia",
-                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/BlueMonkey.jpg/220px-BlueMonkey.jpg"
-            });
-
-            source.Add(new Monkey
-            {
-                Name = "Squirrel Monkey",
-                Location = "Central & South America",
-                Details = "The squirrel monkeys are the New World monkeys of the genus Saimiri. They are the only genus in the subfamily Saimirinae. The name of the genus Saimiri is of Tupi origin, and was also used as an English name by early researchers.",
-                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Saimiri_sciureus-1_Luc_Viatour.jpg/220px-Saimiri_sciureus-1_Luc_Viatour.jpg"
+                Mark = "5",
+                QuestionText = "Baboon",
+                Solution = "Africa & Asia",
+                Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg",
+                Answers = ""
             });
 
             source.Add(new Question
             {
-                QuestionText = "Golden Lion Tamarin",
-                Solution = "Brazil",
-                Mark = "The golden lion tamarin also known as the golden marmoset, is a small New World monkey of the family Callitrichidae.",
-                Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Golden_lion_tamarin_portrait3.jpg/220px-Golden_lion_tamarin_portrait3.jpg"
+                Mark = "6",
+                QuestionText = "Capuchin Monkey",
+                Solution = "Central & South America",
+                Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Capuchin_Costa_Rica.jpg/200px-Capuchin_Costa_Rica.jpg",
+                Answers = ""
             });
 
+            source.Add(new Question
+            {
+                Mark = "7",
+                QuestionText = "Blue Monkey",
+                Solution = "Central and East Africa",
+                Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/BlueMonkey.jpg/220px-BlueMonkey.jpg",
+                Answers = ""
+            });
           
             Questions = new ObservableCollection<Question>(source);
         }
 
         void FilterItems(string filter)
         {
-            var filteredItems = source.Where(monkey => monkey.Name.ToLower().Contains(filter.ToLower())).ToList();
-            foreach (var monkey in source)
+            var filteredItems = source.Where(question => question.QuestionText.ToLower().Contains(filter.ToLower())).ToList();
+            foreach (var question in source)
             {
-                if (!filteredItems.Contains(monkey))
+                if (!filteredItems.Contains(question))
                 {
-                    Monkeys.Remove(monkey);
+                    Questions.Remove(question);
                 }
                 else
                 {
-                    if (!Monkeys.Contains(monkey))
+                    if (!Questions.Contains(question))
                     {
-                        Monkeys.Add(monkey);
+                        Questions.Add(question);
                     }
                 }
             }
         }
 
-        void MonkeySelectionChanged()
+        void QuestionSelectionChanged()
         {
-            SelectedMonkeyMessage = $"Selection {selectionCount}: {SelectedMonkey.Name}";
-            OnPropertyChanged("SelectedMonkeyMessage");
+            SelectedQuestionMessage = $"Selection {selectionCount}: {SelectedQuestion.QuestionText}";
+            OnPropertyChanged("SelectedQuestionMessage");
             selectionCount++;
         }
 
-        void RemoveMonkey(Monkey monkey)
+        void RemoveQuestion(Question question)
         {
-            if (Monkeys.Contains(monkey))
+            if (Questions.Contains(question))
             {
-                Monkeys.Remove(monkey);
+                Questions.Remove(question);
             }
         }
 
-        void FavoriteMonkey(Monkey monkey)
+        void FavoriteQuestion(Question question)
         {
-            monkey.IsFavorite = !monkey.IsFavorite;
+            question.Solution = question.Solution;
         }
 
         #region INotifyPropertyChanged
