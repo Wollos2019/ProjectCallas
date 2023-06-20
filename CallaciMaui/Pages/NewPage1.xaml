@@ -25,7 +25,7 @@
         </HorizontalStackLayout>
 
         <HorizontalStackLayout>
-            <Picker Title="Set an answer">
+            <Picker Title="Set an answer" SelectedIndexChanged="OnPickerSelectedIndexChanged">
                 <Picker.Items>
                     <x:String>Response 1</x:String>
                     <x:String>Response 2</x:String>
